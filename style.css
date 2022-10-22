@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500&family=Nanum+Myeongjo:wght@400;700&display=swap');
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Alegreya', serif;
+    font-family: 'Amiri', serif;
+    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Inter', sans-serif;
+    max-width: 100%;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+}
+.topcircle{
+    position: absolute;
+    top: 70px;
+    left: 400px;
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    background: linear-gradient(to bottom, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0.6));
+}
+.bottomcircle{
+    position: absolute;
+    right: 400px;
+    bottom: 70px;
+    height: 150px;
+    width: 150px;
+    border-radius: 150px;
+    background: linear-gradient(to bottom, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0.6));
+}
+#converter{
+    height: 450px;
+    width: 30%;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+#converter .top{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+#converter h1{
+    font-family: 'Alegreya', serif;
+    letter-spacing: .5px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+}
+#converter h1 img{
+    height: 60px;
+}
+form{
+    padding: 0 30px;
+}
+form span{
+    display: flex;
+    flex-direction: column;
+}
+form h2{
+    font-size: 17px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+}
+form input{
+    height: 40px;
+    width: 100%;
+    background-color: transparent;
+    font-size: 19px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Amiri', serif;
+    background-color: transparent;
+}
+form input::placeholder{
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .1px;
+    font-family: 'Amiri', serif;
+}
+form .row{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+form .row .spanselect{
+    width: 50%;
+}
+form .row .rightalign{
+    align-items: flex-end;
+}
+form .row label{
+    font-size: 17px;
+    font-weight: 400;
+    color: black;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+}
+form .row select{
+    height: 40px;
+    width: 85%;
+    border-radius: 4px;
+    padding: 10px;
+    outline: none;
+    background-color: transparent;
+    font-size: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+form .rowspan{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 16px;
+    margin: 30px 0;
+}
+form h3, form h4{
+    font-size: 16px;
+    margin-right: 5px;
+    position: relative;
+}
+form h3::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    background-color: rgba(128, 0, 128, 0.8);
+}
+form button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: .4px;
+    color: white;
+    background: linear-gradient(to right, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0.6));
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+form button::after{
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    transform: scale(0);
+    transition: transform 450ms ease-in-out 50ms;
+    z-index: -1;
+}
+form button:hover::after{
+    transform: scale(1);
+}
+
