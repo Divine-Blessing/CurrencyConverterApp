@@ -97,6 +97,9 @@ form input::placeholder{
     letter-spacing: .1px;
     font-family: 'Amiri', serif;
 }
+form input:focus{
+    border: 1px solid rgba(128, 0, 128, 0.8);
+}
 form .row{
     display: flex;
     justify-content: space-between;
@@ -125,6 +128,32 @@ form .row select{
     font-size: 15px;
     border: 1px solid rgba(0, 0, 0, 0.7);
     cursor: pointer;
+}
+form .row select option{
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    cursor: pointer;                                                                                                                                            
+    /* box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2); */
+    /* overflow: scroll; */
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 0px;
+    background: transparent;
+}
+form .row select option:focus   {
+    background-color: rgba(128, 0, 128, 0.8);
+}
+/* 
+#resume .inleft{
+    background-color: #141414;
+    height: 75vh;
+    width: 80%;
+    padding: 40px 30px;
+}
+*/
+form select:focus{
+    border: 1px solid rgba(128, 0, 128, 0.8);
 }
 form .rowspan{
     display: flex;
